@@ -1,4 +1,4 @@
-# EventManager ![build](https://travis-ci.org/harrygallagher4/EventManager.svg?branch=master)
+# EventManager [![Build Status](https://travis-ci.org/harrygallagher4/EventManager.svg?branch=master)](https://travis-ci.org/harrygallagher4/EventManager)
 
 ## About
 
