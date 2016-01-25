@@ -14,7 +14,7 @@ import java.util.function.Consumer;
  *
  * TODO: implement unregister functionality
  * @see Consumer
- * @see Consumer#andThen(Consumer)
+ * @see Consumer#andThen
  */
 public class EventManager {
 
@@ -28,22 +28,23 @@ public class EventManager {
      * {@code Consumer}s together and updates {@code functions} with the new
      * value.
      *
-     * @param f     Consumer of the event
-     * @param <C>   Type of event to listen for
+     * @param listener      {@code Consumer} of the event
+     * @param eventClass    {@code Event} class to listen for
+     * @param <C>           Type of {@code Event} to listen for
      *
      * @see #functions
      * @see Event
      * @see Consumer
-     * @see Consumer#andThen(Consumer)
+     * @see Consumer#andThen
      */
-    public <C extends Event> void on(Class<C> eventClass, Consumer<C> f) {
+    public <C extends Event> void on(Class<C> eventClass, Consumer<C> listener) {
         Consumer<C> consumer;
 
         if (this.functions.containsKey(eventClass)) {
             consumer = this.getConsumer(eventClass);
-            this.functions.put(eventClass, consumer.andThen(f));
+            this.functions.put(eventClass, consumer.andThen(listener));
         } else {
-            this.functions.put(eventClass, f);
+            this.functions.put(eventClass, listener);
         }
     }
 
