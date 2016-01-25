@@ -1,3 +1,5 @@
+# EventManager ![build](https://travis-ci.org/harrygallagher4/EventManager.svg?branch=master)
+
 ## About
 
 This project is a Java event manager based on Java 8's [`FunctionalInterface`][]. The manager maps `Event` classes to [`Consumer`][]s. If you haven't been introduced to these Java 8 features, you should probably read up on them. I'm not going to explain them here. 
