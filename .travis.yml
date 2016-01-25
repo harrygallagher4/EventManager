@@ -1,4 +1,10 @@
 language: java
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
+deploy:
+  provider: releases
+  api_key:
+    secure: SRLSjOdenztSCTE5B5sstdXwrEfiIcXCMOu2eQunqBsKyLNqDseU1c/pTRz1m2YeK7Zm9/UvbFM05cCtxu1qJK9tV94YLSSjzFXBSpAggKYHeSwgXQFpPRFkLPuG5mR+XMUitJxv7BdyFRq3KqpfX/dlzosahHZ4nTbt87L8wWl4Cs97kAhaaWc3bPf9yCEqFZvI2NSz7AUKUr+P5+Www9RAIImywxmI+Umt1LNuqphJP+TY/dTwIZ0DATIfQIE3WP+lXO9LlKQViWcDkSC04bNuQ08ERIfUeGTqXOv4I5SbC9+95Vzgg2N1mx3Yig+1yIvlOioU8N0afwFrBtxAbj3eV4lrmRWpuZV3TM44GRhOWeNzu/RQN9vWC6fEeJr+enlyInS9kDvjQDXsazoccGFB6BN/L4URGmV/p5dHlO1IUEJDNZciWaIQmDbd9jct1bGDoKFnLoKUtKv85wrFP+EDKEQV6nO5ue59X+qF3h/iD2vtHz1UjvReBDLduz3P4WeWFqXD9libzJB7AmC0o3ahdUDQRzRS/zkvbnv5vpYGcHR53MNbV+g+2QgmAyQolMvaCg+V80vfBFrGB3U+GTegeU49VTjk0MPio8Q2eYjdiWHtnpBYXWgWGNnaO89e1L0HyM7FpGPnFYPfCW+y2+n8n2gZhlJqp1C5F8Mnpdk=
+  file: build/libs/EventManager*.jar
+  on:
+    repo: harrygallagher4/EventManager
