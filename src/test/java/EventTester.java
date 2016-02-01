@@ -75,9 +75,4 @@ public class EventTester {
         }
     }
 
-    public static void main(String[] args) {
-        ClassConsumerMap<Event> map = new ClassConsumerMap<>();
-        map.put(SimpleEvent.class, e -> {});
-    }
-
 }
