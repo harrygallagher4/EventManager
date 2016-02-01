@@ -14,7 +14,7 @@ Super easy.
 
 First, instantiate an `EventManager`
 ~~~java
-import me.hgal.event.EventManager;
+import me.hgal.event.EventEmitter;
 
 EventManager manager = new EventManager();
 ~~~

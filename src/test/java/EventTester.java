@@ -1,5 +1,5 @@
 import me.hgal.event.Event;
-import me.hgal.event.EventManager;
+import me.hgal.event.EventEmitter;
 import org.junit.Test;
 
 import java.util.function.Consumer;
@@ -10,7 +10,7 @@ public class EventTester {
 
     @Test
     public void emitsEvents() {
-        EventManager manager = new EventManager();
+        EventEmitter manager = new EventEmitter();
         final boolean[] received = {false};
         manager.on(SimpleEvent.class, e -> received[0] = true);
 
@@ -21,7 +21,7 @@ public class EventTester {
 
     @Test
     public void removesListeners() {
-        EventManager manager = new EventManager();
+        EventEmitter manager = new EventEmitter();
 
         boolean[] received = {false, false};
 
@@ -42,7 +42,7 @@ public class EventTester {
 
     @Test
     public void emitsToMultiple() {
-        EventManager manager = new EventManager();
+        EventEmitter manager = new EventEmitter();
 
         final boolean[] received = {false, false};
 
