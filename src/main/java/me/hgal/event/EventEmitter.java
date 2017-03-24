@@ -24,7 +24,7 @@ public class EventEmitter {
             functions = new HashMap<>();
 
     /**
-     * Stores listeners as seperate {@code Consumer}s in case a listener is to
+     * Stores listeners as separate {@code Consumer}s in case a listener is to
      * be cleared.
      */
     private Map<Class<? extends Event>, List<Consumer<? extends Event>>>
@@ -147,7 +147,7 @@ public class EventEmitter {
      */
     public <T extends Event> T emit(T event) {
         if (this.functions.containsKey(event.getClass())) {
-            this.getConsumer(event.getClass()).accept(event);
+            this.getConsumer((Class<T>) event.getClass()).accept(event);
         }
 
         return event;
@@ -171,7 +171,7 @@ public class EventEmitter {
      * @see Consumer
      */
     @SuppressWarnings({"unchecked", "SuspiciousMethodCalls"})
-    private <T> Consumer<T> getConsumer(Class<? extends T> c) {
+    private <T> Consumer<T> getConsumer(Class<T> c) {
         return (Consumer<T>) this.functions.get(c);
     }
 
