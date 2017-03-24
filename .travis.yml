@@ -10,4 +10,6 @@ notifications:
 addons:
   artifacts:
     debug: true
-    s3_permissions: "public"
+    bucket: me.hgal.event
+    cache_control: public
+    permissions: public
