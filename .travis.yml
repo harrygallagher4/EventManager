@@ -7,3 +7,5 @@ notifications:
       - harrygallagher4@gmail.com
     on_failure: always
     on_success: never
+addons:
+  artifacts: true
