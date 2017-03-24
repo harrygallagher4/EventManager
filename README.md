@@ -57,8 +57,5 @@ System.out.println(e.toString())
 // > 0
 ~~~
 
-## Notes
-* As of now, it's not possible to unregister a listener
-
 [`FunctionalInterface`]: https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html
 [`Consumer`]: https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html
