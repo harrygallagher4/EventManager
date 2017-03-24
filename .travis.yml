@@ -9,7 +9,5 @@ notifications:
     on_success: never
 addons:
   artifacts:
-    debug: true
-    bucket: me.hgal.event
-    cache_control: private
+    provider: s3
     permissions: public
