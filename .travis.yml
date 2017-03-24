@@ -4,10 +4,14 @@ jdk:
 notifications:
   email:
     recipients:
-      - harrygallagher4@gmail.com
+    - harrygallagher4@gmail.com
     on_failure: always
     on_success: never
-addons:
-  artifacts:
-    provider: s3
-    permissions: public
+deploy:
+  provider: releases
+  api_key:
+    secure: t/QvHR02tjhzF9FUq4knsmyB7rwx9dJ+4ic8Ht7iDf9ySLoepXLcg9vVJ4BI1o7m/qh9fRKkrhXDgUlgy9FGBCGZTxLC12DKIh2dcVFqYOm6n6W2DYzCcWpHyNw5MG1DjQaaca3LbDY5H6ds00Q6xS6LTCnJtmFlTv80X7JmqL/u3trRVbb7Gvixo5ij2oB6kcPPqWuBFCAs6kvL+QZFO2CgfSc4/Fn8pLDq7NwbXRF7+BPPY6K09ORYC0OfD2trfIOlb2n+Bc1l+ZmSQUoSlGxlOyUMOKSKTbnkXktewRZd/wnnCUHHoR6lI14bImRgRgLrEN9gYkbRaJ4SeNrO+4QY/uilBOFMqMHwA0v4R0MLY6hW1RQFsT9IjuI0d3+1Crt8dQkI+oOIFP2urm+5gAa+FUXxKS1aefAOj9ewAV/tCeOIxRrcQ9SsaqdzseAXYy45J/OPbKaH/sbnmjAC4OpJxDSCG5zbMBV9kGkp5J55PgtGZeOlTNqI9E+fvGOY6pL8R3FDUb+JYfj/WuHmRwtjHcUKVIvYqgqeFEeH34IQV4Mh1QitzZYd2FKDTJ7u+PSe0dLwfxAVleGmt1olg4LdxwYtQnhmYD59ay12jaJDpbV+peYpOM7UobL9WIVxY+Fn2N5CaQ/TssdxTnKG60hnwnOoFrSUiHbVwywke8k=
+  file: build/libs/*
+  file_glob: true
+  on:
+    repo: harrygallagher4/EventManager
