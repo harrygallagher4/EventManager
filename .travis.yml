@@ -11,5 +11,5 @@ addons:
   artifacts:
     debug: true
     bucket: me.hgal.event
-    cache_control: public
+    cache_control: private
     permissions: public
